@@ -1,4 +1,4 @@
-package com.kohen.firstproject;
+package com.kohen.firstproject.controllers;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
