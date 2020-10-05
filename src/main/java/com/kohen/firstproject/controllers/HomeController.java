@@ -9,6 +9,9 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class HomeController {
@@ -49,6 +52,21 @@ public class HomeController {
 	    String formattedTime = timeObj.format(formatObj);
 		model.addAttribute("currentTime", formattedTime);
 		return "time.jsp";
+	}
+	
+	@GetMapping("/code")
+	public String code() {
+		return "code.jsp";
+	}
+	
+	@PostMapping("/try_code")
+    public String try_code(@RequestParam(value="codeInput") String codeInput, RedirectAttributes flash) {
+		if(codeInput.equals("bushido")) {
+			return "redirect:/code";
+		} else {
+			flash.addFlashAttribute("codeError", "Incorrect code!");
+			return "redirect:/";
+		}
 	}
 }
 
