@@ -23,8 +23,8 @@
 				<div class="btn-group" role="group"
 					aria-label="Directory Button Group">
 					<a type="button" class="btn btn-secondary" href='/date'>Date</a> <a
-						type="button" class="btn btn-secondary" href='time'>Time</a> <a
-						type="button" class="btn btn-secondary" href='counter'>Counter</a>
+						type="button" class="btn btn-secondary" href='/time'>Time</a> <a
+						type="button" class="btn btn-secondary" href='/counter'>Counter</a>
 				</div>
 			</div>
 		</div>
