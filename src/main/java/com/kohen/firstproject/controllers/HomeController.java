@@ -60,7 +60,7 @@ public class HomeController {
 	}
 	
 	@PostMapping("/try_code")
-    public String try_code(@RequestParam(value="codeInput") String codeInput, RedirectAttributes flash) {
+	public String try_code(@RequestParam(value="codeInput") String codeInput, RedirectAttributes flash) {
 		if(codeInput.equals("bushido")) {
 			return "redirect:/code";
 		} else {
